@@ -8,7 +8,12 @@ import type { Mesh, ShaderMaterial } from "three"
 function Sphere() {
   const meshRef = useRef<Mesh>(null)
   const materialRef = useRef<ShaderMaterial>(null)
-  const { pointer } = useThree()
+  const { pointer, viewport } = useThree()
+
+  // Scale sphere based on viewport aspect ratio so it looks consistent
+  // On tall/narrow mobile screens, shrink the sphere to avoid distortion
+  const aspect = viewport.width / viewport.height
+  const sphereScale = aspect < 1 ? aspect * 0.85 + 0.15 : 1
 
   const uniforms = useMemo(
     () => ({
@@ -115,7 +120,7 @@ function Sphere() {
   })
 
   return (
-    <mesh ref={meshRef}>
+    <mesh ref={meshRef} scale={sphereScale}>
       <icosahedronGeometry args={[1.8, 64]} />
       <shaderMaterial
         ref={materialRef}
