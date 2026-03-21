@@ -47,10 +47,10 @@ export function Footer() {
         />
 
         {/* Content */}
-        <div className="relative py-16 md:py-24 px-8 md:px-12 border-t border-white/10">
+        <div className="relative py-12 md:py-24 px-4 sm:px-6 md:px-12 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <motion.h2
-              className="font-sans text-4xl md:text-6xl lg:text-8xl font-light tracking-tight text-center md:text-left"
+              className="font-sans text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-light tracking-tight text-center md:text-left"
               animate={{
                 color: isHovered ? "#050505" : "#fafafa",
               }}
@@ -66,14 +66,14 @@ export function Footer() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <ArrowUpRight className="w-12 h-12 md:w-16 md:h-16" />
+              <ArrowUpRight className="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16" />
             </motion.div>
           </div>
         </div>
       </motion.a>
 
       {/* Footer Info */}
-      <div className="px-8 md:px-12 py-8 border-t border-white/10">
+      <div className="px-4 sm:px-6 md:px-12 py-8 border-t border-white/10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Local Time */}
           <div className="font-mono text-xs tracking-widest text-muted-foreground">

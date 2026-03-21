@@ -30,7 +30,7 @@ export default function WritingPage() {
       <Navbar />
       <main className="pt-32">
         {/* Page Header */}
-        <section className="relative px-8 md:px-12 py-12 md:py-16 mb-20">
+        <section className="relative px-4 sm:px-6 md:px-12 py-12 md:py-16 mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function WritingPage() {
         </section>
 
         {/* Blog Posts */}
-        <section className="relative px-8 md:px-12 mb-32">
+        <section className="relative px-4 sm:px-6 md:px-12 mb-32">
           <div className="max-w-3xl">
             {blogPosts.map((post, index) => (
               <motion.div
@@ -144,7 +144,7 @@ export default function WritingPage() {
         </section>
 
         {/* Newsletter Section */}
-        <section className="relative px-8 md:px-12 mb-32">
+        <section className="relative px-4 sm:px-6 md:px-12 mb-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -159,7 +159,7 @@ export default function WritingPage() {
             </div>
 
             <form onSubmit={handleSubscribe} className="space-y-4">
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
                   placeholder="your@email.com"
@@ -172,7 +172,7 @@ export default function WritingPage() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3 border border-white/20 rounded-lg font-mono text-sm tracking-wider text-muted-foreground hover:border-white/40 hover:text-white transition-colors duration-300"
+                  className="px-6 py-3 border border-white/20 rounded-lg font-mono text-sm tracking-wider text-muted-foreground hover:border-white/40 hover:text-white transition-colors duration-300 whitespace-nowrap"
                 >
                   {subscribed ? "✓ Subscribed" : "Subscribe"}
                 </motion.button>

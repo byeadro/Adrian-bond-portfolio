@@ -120,7 +120,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`group text-4xl font-sans tracking-tight ${
+                    className={`group text-2xl sm:text-3xl md:text-4xl font-sans tracking-tight ${
                       isActive(link.href) ? "text-foreground" : "text-foreground"
                     }`}
                   >

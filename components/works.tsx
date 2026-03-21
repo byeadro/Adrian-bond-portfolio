@@ -28,7 +28,7 @@ export function Works() {
   }
 
   return (
-    <section className="relative py-32 px-8 md:px-12 md:py-24">
+    <section className="relative py-20 px-4 sm:px-6 md:px-12 md:py-24">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export function Works() {
 
               {/* Title */}
               <motion.h3
-                className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight group-hover:text-white/70 transition-colors duration-300 flex-1"
+                className="font-sans text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-light tracking-tight group-hover:text-white/70 transition-colors duration-300 flex-1"
                 animate={{
                   x: hoveredIndex === index ? 20 : 0,
                 }}

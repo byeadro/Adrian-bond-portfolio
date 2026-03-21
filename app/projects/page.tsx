@@ -38,7 +38,7 @@ export default function ProjectsPage() {
       <Navbar />
       <main className="pt-32">
         {/* Page Header */}
-        <section className="relative px-8 md:px-12 py-12 md:py-16 mb-20">
+        <section className="relative px-4 sm:px-6 md:px-12 py-12 md:py-16 mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function ProjectsPage() {
 
         {/* Featured Projects */}
         {featuredProjects.length > 0 && (
-          <section ref={containerRef} onMouseMove={handleMouseMove} className="relative px-8 md:px-12 mb-32">
+          <section ref={containerRef} onMouseMove={handleMouseMove} className="relative px-4 sm:px-6 md:px-12 mb-32">
             <div className="mb-12">
               <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">FEATURED</p>
             </div>
@@ -119,7 +119,7 @@ export default function ProjectsPage() {
 
         {/* Other Projects */}
         {otherProjects.length > 0 && (
-          <section className="relative px-8 md:px-12 mb-32">
+          <section className="relative px-4 sm:px-6 md:px-12 mb-32">
             <div className="mb-12">
               <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">ALSO BUILT</p>
             </div>
@@ -167,7 +167,7 @@ export default function ProjectsPage() {
 
         {/* Empty State */}
         {projects.length === 0 && (
-          <section className="relative px-8 md:px-12 py-24 text-center">
+          <section className="relative px-4 sm:px-6 md:px-12 py-24 text-center">
             <p className="text-muted-foreground">No projects yet.</p>
           </section>
         )}

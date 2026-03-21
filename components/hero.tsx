@@ -23,7 +23,7 @@ export function Hero() {
       </div>
 
       {/* Typography Overlay */}
-      <motion.div style={{ opacity, scale }} className="relative z-10 h-full flex flex-col justify-between p-8 md:p-12 md:px-12 md:py-20">
+      <motion.div style={{ opacity, scale }} className="relative z-10 h-full flex flex-col justify-between p-4 sm:p-6 md:p-12 md:py-20">
         {/* Top Left */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -31,7 +31,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">01 — IDENTITY</p>
-          <h2 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
+          <h2 className="font-sans text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
             FOUNDER
             <br />
             <span className="italic">&</span>
@@ -66,7 +66,7 @@ export function Hero() {
           className="self-end text-right"
         >
           <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">02 — PASSION</p>
-          <h2 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
+          <h2 className="font-sans text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
             PROMPT
             <br />
             <span className="italic">ENGINEER</span>

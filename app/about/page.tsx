@@ -50,13 +50,13 @@ export default function About() {
       <Navbar />
       <main ref={containerRef} className="pt-24">
         {/* Hero Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 min-h-screen flex flex-col justify-center">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 min-h-screen flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1 className="font-sans text-5xl md:text-7xl lg:text-8xl font-light italic text-white mb-8">
+            <h1 className="font-sans text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-light italic text-white mb-8">
               About
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
@@ -66,7 +66,7 @@ export default function About() {
         </section>
 
         {/* Philosophy Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export default function About() {
         </section>
 
         {/* Approach Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export default function About() {
         </section>
 
         {/* Technical Skills Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ export default function About() {
         </section>
 
         {/* Press Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -223,7 +223,7 @@ export default function About() {
         </section>
 
         {/* Recognition Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -249,7 +249,7 @@ export default function About() {
                   <img
                     src="/nvidia-inception-badge.png"
                     alt="NVIDIA Inception Program Badge"
-                    className="w-64 md:w-80 h-auto"
+                    className="w-48 sm:w-64 md:w-80 h-auto"
                   />
                 </div>
               </div>
@@ -268,7 +268,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

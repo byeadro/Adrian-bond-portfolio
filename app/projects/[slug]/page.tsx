@@ -21,7 +21,7 @@ export default function ProjectDetailPage() {
       <SmoothScroll>
         <CustomCursor />
         <Navbar />
-        <main className="pt-32 px-8 md:px-12 min-h-screen flex items-center justify-center">
+        <main className="pt-32 px-4 sm:px-6 md:px-12 min-h-screen flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function ProjectDetailPage() {
       <Navbar />
       <main className="pt-32">
         {/* Hero Section */}
-        <section className="relative px-8 md:px-12 py-12 md:py-20 border-b border-white/10">
+        <section className="relative px-4 sm:px-6 md:px-12 py-12 md:py-20 border-b border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function ProjectDetailPage() {
               <div className="w-8 h-px bg-white/10" />
             </div>
 
-            <h1 className="font-sans text-4xl md:text-6xl font-light italic mb-8">{project.title}</h1>
+            <h1 className="font-sans text-2xl sm:text-3xl md:text-6xl font-light italic mb-8">{project.title}</h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">{project.description}</p>
 
@@ -86,7 +86,7 @@ export default function ProjectDetailPage() {
         </section>
 
         {/* Content Section */}
-        <section className="relative px-8 md:px-12 py-16 md:py-24 max-w-4xl">
+        <section className="relative px-4 sm:px-6 md:px-12 py-16 md:py-24 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function ProjectDetailPage() {
         </section>
 
         {/* Back Link */}
-        <section className="relative px-8 md:px-12 py-8 border-t border-white/10">
+        <section className="relative px-4 sm:px-6 md:px-12 py-8 border-t border-white/10">
           <Link href="/projects">
             <motion.button
               whileHover={{ x: -4 }}

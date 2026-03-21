@@ -56,13 +56,13 @@ export default function Contact() {
       <Navbar />
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 min-h-screen flex flex-col justify-center">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 min-h-screen flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1 className="font-sans text-5xl md:text-7xl lg:text-8xl font-light italic text-white mb-8">
+            <h1 className="font-sans text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-light italic text-white mb-8">
               Get in Touch
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
@@ -72,8 +72,8 @@ export default function Contact() {
         </section>
 
         {/* Contact Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 lg:gap-24">
             {/* Left Column - Email & Status */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -90,7 +90,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.05 }}
                   className="block group"
                 >
-                  <p className="font-sans text-2xl md:text-3xl font-light text-white group-hover:text-accent transition-colors duration-300">
+                  <p className="font-sans text-lg sm:text-2xl md:text-3xl font-light text-white group-hover:text-accent transition-colors duration-300 break-all sm:break-normal">
                     byeadro.dev@gmail.com
                   </p>
                 </motion.a>
@@ -104,7 +104,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.05 }}
                   className="block group"
                 >
-                  <p className="font-sans text-2xl md:text-3xl font-light text-white group-hover:text-accent transition-colors duration-300">
+                  <p className="font-sans text-lg sm:text-2xl md:text-3xl font-light text-white group-hover:text-accent transition-colors duration-300 break-all sm:break-normal">
                     (217) 891-1364
                   </p>
                 </motion.a>
@@ -220,7 +220,7 @@ export default function Contact() {
         </section>
 
         {/* Additional Info Section */}
-        <section className="px-8 md:px-12 py-20 md:py-32 border-t border-white/10">
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
