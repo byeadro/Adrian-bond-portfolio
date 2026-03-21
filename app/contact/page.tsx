@@ -26,8 +26,9 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", message: "" })
+    const subject = encodeURIComponent(`Contact from ${formData.name}`)
+    const body = encodeURIComponent(`${formData.message}\n\nFrom: ${formData.name} (${formData.email})`)
+    window.location.href = `mailto:byeadro.dev@gmail.com?subject=${subject}&body=${body}`
   }
 
   const containerVariants = {
