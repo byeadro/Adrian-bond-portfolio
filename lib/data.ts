@@ -44,6 +44,16 @@ const fallbackProjects: Project[] = [
     featured: true,
   },
   {
+    slug: "voltly-ai",
+    title: "Voltly AI",
+    description: "An AI-powered utility bill intelligence platform — automate data extraction, visualize energy trends, and forecast costs. No spreadsheets required.",
+    longDescription: "Voltly AI transforms how businesses handle utility bills. Upload any utility PDF and the AI extracts every data point instantly, replacing hours of manual entry with seconds of automated intelligence. Features include automated variance alerts, spend forecasting, pitch-deck-ready reports, and Excel exports — all wrapped in enterprise-grade security with GDPR & SOC2 compliance. Built to take businesses from billing chaos to clarity.",
+    tags: ["TypeScript", "AI/ML", "Next.js", "SaaS"],
+    year: "2025",
+    url: "https://www.voltly.ai",
+    featured: true,
+  },
+  {
     slug: "drawsort",
     title: "DrawSort",
     description: "An interactive sorting and organization tool that makes visual categorization intuitive and fun. Draw to sort, organize, and classify.",
