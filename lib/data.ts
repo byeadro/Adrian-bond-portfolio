@@ -1,0 +1,113 @@
+import { fetchProjects, fetchBlogPosts } from "./notion"
+
+export interface Project {
+  slug: string
+  title: string
+  description: string
+  longDescription: string
+  tags: string[]
+  year: string
+  url: string
+  featured: boolean
+}
+
+export interface BlogPost {
+  slug: string
+  title: string
+  excerpt: string
+  date: string
+  readTime: string
+  tags: string[]
+  url?: string
+}
+
+// Static fallback data — used when Notion API key is not configured
+const fallbackProjects: Project[] = [
+  {
+    slug: "embra",
+    title: "Embra",
+    description: "A B2B SaaS platform built for law schools — giving students an AI-powered mentor and study companion that actually understands the pressure of legal education.",
+    longDescription: "Embra is a B2B SaaS platform built specifically for law schools, giving students an AI-powered mentor and study companion that actually understands the pressure of legal education. Born from watching my wife grind through law school and surveying 100+ law students about what was missing, we're building the future of legal education — one law school at a time.",
+    tags: ["TypeScript", "Python", "AI/ML", "Supabase"],
+    year: "2025",
+    url: "https://app.joinembra.com",
+    featured: true,
+  },
+  {
+    slug: "whos-right",
+    title: "Who's Right",
+    description: "A debate app that transforms arguments into constructive exchanges. AI analyzes and scores logic, provides live fact-checking, and features an ELO ranking system.",
+    longDescription: "Who's Right reimagines how we debate in the digital age. Using advanced AI to analyze arguments in real-time, it scores logic quality, fact-checks claims, and maintains an ELO ranking system for users. The platform encourages substantive discourse by rewarding clear thinking and evidence-based reasoning, creating a healthier environment for productive disagreement.",
+    tags: ["Swift", "TypeScript", "AI", "SpacetimeDB"],
+    year: "2025",
+    url: "https://www.whosright.live",
+    featured: true,
+  },
+  {
+    slug: "drawsort",
+    title: "DrawSort",
+    description: "An interactive sorting and organization tool that makes visual categorization intuitive and fun. Draw to sort, organize, and classify.",
+    longDescription: "DrawSort brings a playful approach to organizing information. Instead of clicking and dragging traditional interfaces, you draw to categorize. It's a exploration in making mundane organizational tasks feel more intuitive and engaging, leveraging Canvas API for smooth, responsive interactions.",
+    tags: ["JavaScript", "HTML/CSS", "Canvas API"],
+    year: "2026",
+    url: "https://drawsort.com",
+    featured: false,
+  }
+]
+
+const fallbackBlogPosts: BlogPost[] = [
+  {
+    slug: "claude-code-obsidian-productivity",
+    title: "Claude Code + Obsidian Is the Productivity System Nobody's Talking About",
+    excerpt: "How combining Claude Code with Obsidian created the ultimate AI-powered productivity workflow that changed how I build products.",
+    date: "2025-03-10",
+    readTime: "7 min read",
+    tags: ["AI", "Productivity"],
+    url: "https://medium.com/ai-in-plain-english/claude-code-obsidian-is-the-productivity-system-nobodys-talking-about-9c20c668a73c",
+  },
+  {
+    slug: "senior-dev-200k-rebuilt-3-days",
+    title: "A Senior Dev Said My App Would Cost $200K — I Rebuilt It in 3 Days",
+    excerpt: "Here are my 7 tools that let me ship what a team of engineers quoted six figures for, in a fraction of the time.",
+    date: "2025-02-20",
+    readTime: "9 min read",
+    tags: ["Startup", "Tools"],
+    url: "https://medium.com/ai-in-plain-english/a-senior-dev-said-my-app-would-cost-200k-i-rebuilt-it-in-3-days-here-are-my-7-tools-f77375114ec3",
+  },
+  {
+    slug: "dont-know-how-to-code-building-tech-company",
+    title: "I Don't Know How to Code. I'm Building a Tech Company Anyway.",
+    excerpt: "The honest story of how I went from zero coding experience to building AI products — by learning to ask the right questions.",
+    date: "2025-01-15",
+    readTime: "6 min read",
+    tags: ["Startup", "Philosophy"],
+    url: "https://medium.com/@adrianmbond/i-dont-know-how-to-code-i-m-building-a-tech-company-anyway-86c132025fe8",
+  }
+]
+
+/**
+ * Get projects — fetches from Notion if configured, otherwise uses static fallback.
+ * Cached for 60 seconds during development, revalidated on deploy.
+ */
+export async function getProjects(): Promise<Project[]> {
+  if (!process.env.NOTION_API_KEY) {
+    return fallbackProjects
+  }
+  const notionProjects = await fetchProjects()
+  return notionProjects.length > 0 ? notionProjects : fallbackProjects
+}
+
+/**
+ * Get blog posts — fetches from Notion if configured, otherwise uses static fallback.
+ */
+export async function getBlogPosts(): Promise<BlogPost[]> {
+  if (!process.env.NOTION_API_KEY) {
+    return fallbackBlogPosts
+  }
+  const notionPosts = await fetchBlogPosts()
+  return notionPosts.length > 0 ? notionPosts : fallbackBlogPosts
+}
+
+// Keep static exports for backward compatibility during migration
+export const projects = fallbackProjects
+export const blogPosts = fallbackBlogPosts

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" fill="none">
+  <rect width="500" height="160" fill="white"/>
+  <rect x="4" y="4" width="492" height="152" fill="black" stroke="white" stroke-width="4"/>
+  <!-- NVIDIA Eye Logo -->
+  <g transform="translate(30, 25) scale(0.85)">
+    <!-- Outer eye shape -->
+    <path d="M52.8 46.4c0 0-0.8-16-16-24.8C22.4 14.4 8 22.4 8 22.4s-3.2 4-4.8 8c7.2-6.4 16-9.6 24.8-9.6 16 0 24.8 12 24.8 12s-4 8.8-14.4 14.4c-4 2.4-8.8 3.2-13.6 3.2-8 0-14.4-3.2-14.4-3.2l-2.4 4s7.2 4 17.6 4c8 0 16-2.4 22.4-7.2C52 44.8 52.8 46.4 52.8 46.4z" fill="white"/>
+    <path d="M24.8 20.8c-8.8 0-16.8 4-22.4 10.4L0 36c2.4-4.8 6.4-9.6 12-12.8 4-2.4 8.8-4 13.6-4 8 0 14.4 4 18.4 8.8 0 0-4-7.2-19.2-7.2z" fill="white"/>
+    <!-- Simplified NVIDIA eye -->
+    <circle cx="26" cy="36" r="8" fill="white"/>
+    <circle cx="26" cy="36" r="4" fill="black"/>
+  </g>
+  <!-- NVIDIA Text -->
+  <text x="30" y="105" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="42" fill="white" letter-spacing="2">NVIDIA</text>
+  <!-- Divider Line -->
+  <line x1="225" y1="30" x2="225" y2="130" stroke="white" stroke-width="2"/>
+  <!-- Inception Program Text -->
+  <text x="250" y="75" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="36" fill="black">Inception</text>
+  <text x="250" y="115" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="36" fill="black">Program</text>
+</svg>
