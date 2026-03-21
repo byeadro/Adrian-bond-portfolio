@@ -104,7 +104,11 @@ export async function getProjects(): Promise<Project[]> {
     return fallbackProjects
   }
   const notionProjects = await fetchProjects()
-  return notionProjects.length > 0 ? notionProjects : fallbackProjects
+  if (notionProjects.length === 0) return fallbackProjects
+  // Merge: Notion projects + any fallback-only projects (e.g. Voltly)
+  const notionSlugs = new Set(notionProjects.map((p) => p.slug))
+  const extras = fallbackProjects.filter((p) => !notionSlugs.has(p.slug))
+  return [...notionProjects, ...extras]
 }
 
 /**

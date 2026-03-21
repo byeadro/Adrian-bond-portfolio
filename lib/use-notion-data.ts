@@ -16,7 +16,11 @@ export function useProjects(): Project[] {
       .then((res) => res.json())
       .then((notionData) => {
         if (notionData && notionData.length > 0) {
-          setData(notionData)
+          // Merge: use Notion data as base, then add any fallback projects
+          // that aren't already in Notion (e.g. Voltly added via code)
+          const notionSlugs = new Set(notionData.map((p: Project) => p.slug))
+          const extras = fallbackProjects.filter((p) => !notionSlugs.has(p.slug))
+          setData([...notionData, ...extras])
         }
       })
       .catch(() => {
