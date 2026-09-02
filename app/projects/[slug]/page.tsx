@@ -68,6 +68,8 @@ export default function ProjectDetailPage() {
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">{project.description}</p>
 
+            {project.role && <p className="font-mono text-xs tracking-widest text-white/60 mb-8">{project.role}</p>}
+
             {/* Link to Live Site */}
             <motion.a
               href={project.url}

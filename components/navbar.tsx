@@ -19,7 +19,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
   const settings = useSiteSettings()
-  const availability = settings.availability || "Available for work"
+  const availability = settings.availability || "Open to new projects"
 
   useEffect(() => {
     const handleScroll = () => {

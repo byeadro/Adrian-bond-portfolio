@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Adrian Bond | Founder & Prompt Engineer",
-  description: "Founder & Prompt Engineer. I build across languages and create products that think alongside humans."
+  title: "Adrian Bond | Founder & CEO, Embra Law - Software Developer",
+  description: "Adrian Bond is founder & CEO of Embra Law and a software developer building AI-native products from Little Rock, Arkansas.",
 }
 
 export const viewport: Viewport = {

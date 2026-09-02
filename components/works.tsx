@@ -38,7 +38,7 @@ export function Works() {
         className="mb-24"
       >
         <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">04 - SELECTED WORKS</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Things I&apos;ve Built</h2>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Products I&apos;ve Shipped</h2>
       </motion.div>
 
       {/* Projects List */}

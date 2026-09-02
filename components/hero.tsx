@@ -31,11 +31,14 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">01 - IDENTITY</p>
-          <h2 className="font-sans text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
-            FOUNDER
+          <h1 className="font-sans text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
+            FOUNDER & CEO
             <br />
-            <span className="italic">&</span>
-          </h2>
+            <span className="italic">EMBRA LAW</span>
+          </h1>
+          <p className="font-mono text-[10px] sm:text-xs tracking-[0.15em] text-muted-foreground mt-4 max-w-xs sm:max-w-md leading-relaxed">
+            Building the mentorship infrastructure connecting law students with practicing attorneys.
+          </p>
         </motion.div>
 
         {/* Center Button */}
@@ -67,11 +70,13 @@ export function Hero() {
         >
           <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">02 - PASSION</p>
           <h2 className="font-sans text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
-            PROMPT
+            SOFTWARE
             <br />
-            <span className="italic">ENGINEER</span>
+            <span className="italic">BUILDER</span>
           </h2>
-          <p className="font-mono text-xs tracking-[0.2em] text-muted-foreground mt-4">I vibe code in any language.</p>
+          <p className="font-mono text-[10px] sm:text-xs tracking-[0.15em] text-muted-foreground mt-4 max-w-xs sm:max-w-md ml-auto leading-relaxed">
+            Software developer building AI-native products. Little Rock, Arkansas.
+          </p>
         </motion.div>
       </motion.div>
 

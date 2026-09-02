@@ -9,7 +9,7 @@ export function Footer() {
   const [time, setTime] = useState("")
   const [isHovered, setIsHovered] = useState(false)
   const settings = useSiteSettings()
-  const email = settings.email || "byeadro.dev@gmail.com"
+  const email = settings.email || "adrianbond@myembra.com"
   const footerLinks = [
     { label: "LinkedIn", href: settings.linkedin || "https://www.linkedin.com/in/adrian-bond-87994b20a/" },
     { label: "Instagram", href: settings.instagram || "https://www.instagram.com/byeadro" },

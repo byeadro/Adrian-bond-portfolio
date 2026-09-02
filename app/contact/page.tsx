@@ -10,10 +10,10 @@ import { useSiteSettings } from "@/lib/use-notion-data"
 
 export default function Contact() {
   const settings = useSiteSettings()
-  const email = settings.email || "byeadro.dev@gmail.com"
-  const phone = settings.phone || "(217) 891-1364"
+  const email = settings.email || "adrianbond@myembra.com"
+  const phone = settings.phone || "217-891-1364"
   const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`
-  const availability = settings.availability || "Available for work"
+  const availability = settings.availability || "Open to new projects"
   const socialLinks = [
     { label: "LinkedIn", href: settings.linkedin || "https://www.linkedin.com/in/adrian-bond-87994b20a/" },
     { label: "Instagram", href: settings.instagram || "https://www.instagram.com/byeadro" },
@@ -72,8 +72,40 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-              Whether you want to collaborate on a project, discuss AI, or just say hello, I'd love to hear from you.
+              Have a project in mind? Let&apos;s talk. I work with founders and small teams that need a technical partner who can move quickly.
             </p>
+          </motion.div>
+        </section>
+
+        {/* Work With Me */}
+        <section className="px-4 sm:px-6 md:px-12 py-20 md:py-32 border-t border-white/10">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="max-w-5xl">
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">01 - WORK WITH ME</p>
+            <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">Ship AI-Native Products Faster</h2>
+            <div className="max-w-3xl space-y-5 text-base md:text-lg text-white/70 leading-relaxed">
+              <p>Outside of Embra Law, I take on select freelance and contract projects, helping founders and small teams ship AI-native products fast.</p>
+              <p>I work across the full stack, from product definition to shipped software, and I'm best suited to people who need a technical partner who can move without a large team behind them.</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-10 mt-12">
+              <div>
+                <h3 className="font-mono text-sm tracking-widest text-accent uppercase mb-5">What I help with</h3>
+                <ul className="space-y-3 text-white/70">
+                  <li>Full-stack web app development with React, Next.js, Node, Supabase, and Postgres</li>
+                  <li>AI feature integration, prompt engineering, and LLM-powered workflows</li>
+                  <li>iOS app development with Swift</li>
+                  <li>MVP builds from idea to shipped product</li>
+                  <li>Product design and system architecture for early-stage products</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-mono text-sm tracking-widest text-accent uppercase mb-5">A good fit if you&apos;re</h3>
+                <ul className="space-y-3 text-white/70">
+                  <li>An early-stage founder who needs a builder, not just a contractor</li>
+                  <li>A team adding AI-native features to an existing product</li>
+                  <li>Working on something where speed and iteration matter more than a large team</li>
+                </ul>
+              </div>
+            </div>
           </motion.div>
         </section>
 
@@ -90,7 +122,7 @@ export default function Contact() {
             >
               {/* Email Section */}
               <div className="space-y-6">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">01 - EMAIL</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">02 - EMAIL</p>
                 <motion.a
                   href={`mailto:${email}`}
                   whileHover={{ scale: 1.05 }}
@@ -104,7 +136,7 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="space-y-6 pt-8 border-t border-white/10">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">02 - PHONE</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">03 - PHONE</p>
                 <motion.a
                   href={phoneHref}
                   whileHover={{ scale: 1.05 }}
@@ -118,7 +150,7 @@ export default function Contact() {
 
               {/* Status */}
               <div className="space-y-6 pt-8 border-t border-white/10">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">03 - STATUS</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">04 - STATUS</p>
                 <div className="flex items-center gap-3">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
@@ -126,11 +158,12 @@ export default function Contact() {
                   </span>
                   <span className="font-mono text-sm tracking-wider text-white">{availability.toUpperCase()}</span>
                 </div>
+                <p className="font-mono text-xs tracking-wider text-muted-foreground">LITTLE ROCK, ARKANSAS</p>
               </div>
 
               {/* Social Links */}
               <div className="space-y-6 pt-8 border-t border-white/10">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">04 - SOCIAL</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">05 - SOCIAL</p>
                 <div className="flex flex-col gap-4">
                   {socialLinks.map((link, index) => (
                     <motion.a
@@ -234,15 +267,21 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">05 - LET'S TALK</p>
-            <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">What's on Your Mind?</h2>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">06 - OPEN TO CONVERSATIONS</p>
+            <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">Let&apos;s Talk</h2>
             <div className="space-y-6 text-base md:text-lg text-white/70 leading-relaxed">
-              <p>
-                I'm interested in conversations about AI, product design, prompt engineering, and the future of human-computer interaction. Whether you're working on something groundbreaking or just have an interesting idea to bounce around, I'm here for it.
-              </p>
+              <ul className="space-y-3">
+                <li>Law schools exploring structured mentorship programs</li>
+                <li>Lawyers interested in mentoring students</li>
+                <li>Law firms supporting early legal talent</li>
+                <li>Investors backing education, legal technology, and professional networks</li>
+                <li>Founders and teams looking for freelance or contract development help</li>
+                <li>Podcast, panel, workshop, and speaking opportunities</li>
+              </ul>
               <p>
                 I typically respond to emails within 24 hours. For urgent matters, feel free to reach out on social media as well.
               </p>
+              <p>Whether you want to collaborate on a project, discuss AI, or just say hello, I'd love to hear from you.</p>
             </div>
           </motion.div>
         </section>

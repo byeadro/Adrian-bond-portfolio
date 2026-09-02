@@ -12,6 +12,7 @@ const techItems = [
   "JAVASCRIPT",
   "HTML/CSS",
   "SHELL",
+  "TAILWIND CSS",
 ]
 
 const concepts = [
@@ -20,11 +21,11 @@ const concepts = [
   "SPACETIMEDB",
   "OPENAI",
   "AI/ML",
-  "VIBE CODING",
+  "PROMPT ENGINEERING",
   "FULL-STACK",
-  "PRODUCT",
-  "SYSTEMS",
-  "DATABASES",
+  "PRODUCT STRATEGY",
+  "SYSTEM ARCHITECTURE",
+  "SAAS",
 ]
 
 function MarqueeRow({ items, direction = "left" }: { items: string[]; direction?: "left" | "right" }) {

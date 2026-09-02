@@ -45,8 +45,9 @@ export default function ProjectsPage() {
             transition={{ duration: 0.8 }}
           >
             <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">01 - PROJECTS</p>
-            <h1 className="font-sans text-3xl md:text-5xl font-light italic mb-4">Things I've Built</h1>
-            <p className="text-muted-foreground max-w-2xl">Shipped and proud of. Each project represents a blend of thoughtful design, technical depth, and a commitment to solving real problems.</p>
+            <h1 className="font-sans text-3xl md:text-5xl font-light italic mb-4">Products I&apos;ve Built</h1>
+            <p className="text-muted-foreground max-w-2xl">AI-native products, iOS apps, web platforms, and interactive tools built to solve real problems.</p>
+            <p className="font-mono text-xs tracking-wider text-white/50 mt-4">Source code is private and available for review on request.</p>
           </motion.div>
         </section>
 
@@ -98,6 +99,8 @@ export default function ProjectsPage() {
                       {/* Description */}
                       <p className="text-muted-foreground mb-6 max-w-2xl leading-relaxed">{project.description}</p>
 
+                      {project.role && <p className="font-mono text-xs tracking-wider text-white/60 mb-6">{project.role}</p>}
+
                       {/* Tags */}
                       <div className="flex gap-2 flex-wrap">
                         {project.tags.map((tag) => (
@@ -142,6 +145,7 @@ export default function ProjectsPage() {
                             {project.title}
                           </h3>
                           <p className="text-muted-foreground text-sm">{project.description}</p>
+                          {project.role && <p className="font-mono text-xs tracking-wider text-white/60 mt-3">{project.role}</p>}
                         </div>
                         <span className="font-mono text-xs text-muted-foreground tracking-widest ml-4 whitespace-nowrap">{project.year}</span>
                       </div>
