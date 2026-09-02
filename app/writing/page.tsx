@@ -8,21 +8,9 @@ import { Footer } from "@/components/footer"
 import { CustomCursor } from "@/components/custom-cursor"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { useBlogPosts } from "@/lib/use-notion-data"
-import { useState } from "react"
 
 export default function WritingPage() {
   const blogPosts = useBlogPosts()
-  const [email, setEmail] = useState("")
-  const [subscribed, setSubscribed] = useState(false)
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubscribed(true)
-    setTimeout(() => {
-      setEmail("")
-      setSubscribed(false)
-    }, 3000)
-  }
 
   return (
     <SmoothScroll>
@@ -36,7 +24,7 @@ export default function WritingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">02 — WRITING</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">02 - WRITING</p>
             <h1 className="font-sans text-3xl md:text-5xl font-light italic mb-4">Thoughts & Essays</h1>
             <p className="text-muted-foreground max-w-2xl">Reflections on building products, coding across languages, and the future of AI. Unfiltered takes on the craft of software engineering.</p>
           </motion.div>
@@ -141,44 +129,6 @@ export default function WritingPage() {
               </motion.div>
             ))}
           </div>
-        </section>
-
-        {/* Newsletter Section */}
-        <section className="relative px-4 sm:px-6 md:px-12 mb-32">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl border border-white/10 rounded-lg p-8 md:p-12 hover:border-white/20 hover:bg-white/[0.02] transition-colors duration-300"
-          >
-            <div className="mb-8">
-              <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">NEWSLETTER</p>
-              <h3 className="font-sans text-2xl md:text-3xl font-light italic mb-3">Stay in the loop</h3>
-              <p className="text-muted-foreground">New essays and insights delivered to your inbox every few weeks. No spam, just thoughtful writing.</p>
-            </div>
-
-            <form onSubmit={handleSubscribe} className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-white/30 transition-colors duration-300"
-                />
-                <motion.button
-                  type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3 border border-white/20 rounded-lg font-mono text-sm tracking-wider text-muted-foreground hover:border-white/40 hover:text-white transition-colors duration-300 whitespace-nowrap"
-                >
-                  {subscribed ? "✓ Subscribed" : "Subscribe"}
-                </motion.button>
-              </div>
-            </form>
-          </motion.div>
         </section>
 
         <Footer />

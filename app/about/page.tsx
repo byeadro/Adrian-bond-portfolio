@@ -74,17 +74,17 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">01 — PHILOSOPHY</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">01 - PHILOSOPHY</p>
             <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">Self-Taught. Obsessed. Building Fast.</h2>
             <div className="max-w-3xl space-y-6">
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                I didn't go to a computer science school. I didn't follow a traditional path. What I did was pick up a terminal, open an AI chat, and decide that for the next two years, I'd talk to AI every single day. Not passively — actively grinding, learning how to ask the right questions, building products that matter.
+                I didn't go to a computer science school. I didn't follow a traditional path. What I did was pick up a terminal, open an AI chat, and decide that for the next two years, I'd talk to AI every single day. Not passively, but actively grinding, learning how to ask the right questions, building products that matter.
               </p>
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
                 The truth is, self-taught means something different now. It's not about books or tutorials anymore. It's about being in constant conversation with the best AI available, pushing it to explain concepts, generating boilerplate, debugging your half-formed ideas at 2am, and actually <span className="text-white font-medium">shipping</span>. I've put in the work. Two years of daily iteration, learning by doing, failing fast, and building better.
               </p>
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                I'm a "vibe coder" — TypeScript, Python, Swift, JavaScript, CSS, Shell — whatever the problem demands. When you're self-taught and hungry, you don't pick a lane. You learn what you need, when you need it. That flexibility is my edge. The traditional path teaches you one way. The self-taught path teaches you how to <span className="text-white font-medium">think</span>.
+                I'm a "vibe coder": TypeScript, Python, Swift, JavaScript, CSS, Shell, or whatever the problem demands. When you're self-taught and hungry, you don't pick a lane. You learn what you need, when you need it. That flexibility is my edge. The traditional path teaches you one way. The self-taught path teaches you how to <span className="text-white font-medium">think</span>.
               </p>
               <div className="bg-white/5 border border-white/10 rounded-lg p-6 md:p-8 mt-8">
                 <p className="font-mono text-sm md:text-base italic text-accent">
@@ -103,17 +103,17 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">02 — APPROACH</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">02 - APPROACH</p>
             <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">Solo. Shipping. Learning in Public.</h2>
             <div className="max-w-3xl space-y-6">
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                I build products solo. No committees, no design-by-consensus, no waiting for stakeholder approval. Just me, the code, and the vision. That hustle is where the magic happens — when one person can move fast, iterate, and ship without friction. Every line of code is mine. Every decision is intentional.
+                I build products solo. No committees, no design-by-consensus, no waiting for stakeholder approval. Just me, the code, and the vision. That hustle is where the magic happens: one person can move fast, iterate, and ship without friction. Every line of code is mine. Every decision is intentional.
               </p>
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                Speed is the feature. In a space this fast-moving, the ability to go from idea to shipped product in days — not months — is your competitive advantage. I don't overthink. I build, I test, I learn, I iterate. <span className="text-white font-medium">Shipping beats perfection</span>.
+                Speed is the feature. In a space this fast-moving, the ability to go from idea to shipped product in days, not months, is your competitive advantage. I don't overthink. I build, I test, I learn, I iterate. <span className="text-white font-medium">Shipping beats perfection</span>.
               </p>
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                And I learn in public. Every product I build, every AI interaction I have, every mistake I make — it's all fuel for the next iteration. The self-taught path isn't a secret. It's about being transparent with the journey, sharing what works, and building alongside people who get it. That's how you grow faster.
+                And I learn in public. Every product I build, every AI interaction I have, and every mistake I make is fuel for the next iteration. The self-taught path isn't a secret. It's about being transparent with the journey, sharing what works, and building alongside people who get it. That's how you grow faster.
               </p>
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
                 The goal is simple: <span className="text-white font-medium">build AI-native products that actually matter</span>. Products where humans and AI work together naturally. Where the interface is intuitive. Where the technology disappears and only the value remains.
@@ -131,7 +131,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">03 — TECHNICAL SKILLS</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">03 - TECHNICAL SKILLS</p>
             <h2 className="font-sans text-3xl md:text-5xl font-light italic">Languages & Tools</h2>
           </motion.div>
 
@@ -175,7 +175,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">05 — PRESS</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">05 - PRESS</p>
             <h2 className="font-sans text-3xl md:text-5xl font-light italic">Featured</h2>
           </motion.div>
 
@@ -231,7 +231,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">06 — RECOGNITION</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">06 - RECOGNITION</p>
             <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-12">Backed by Industry Leaders</h2>
           </motion.div>
 
@@ -260,7 +260,7 @@ export default function About() {
                   The <span className="text-white font-medium">NVIDIA Inception Program</span> is an exclusive program designed to help cutting-edge startups evolve faster through access to NVIDIA&apos;s technology stack, expert technical support, and a global co-marketing network of AI innovators.
                 </p>
                 <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                  Acceptance into Inception means NVIDIA recognizes Embra as an innovative AI startup pushing the boundaries of what&apos;s possible. This places our work alongside thousands of vetted AI companies worldwide — from early-stage builders to industry leaders shaping the future of artificial intelligence.
+                  Acceptance into Inception means NVIDIA recognizes Embra as an innovative AI startup pushing the boundaries of what&apos;s possible. This places our work alongside thousands of vetted AI companies worldwide, from early-stage builders to industry leaders shaping the future of artificial intelligence.
                 </p>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">07 — NEXT</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">07 - NEXT</p>
             <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">Let's Build Something</h2>
             <p className="text-base md:text-lg text-white/70 leading-relaxed mb-8">
               If you're interested in AI-native products, prompt engineering, or just want to talk about the future of design and code, let's connect. I'm always excited to meet people who think deeply about these things.

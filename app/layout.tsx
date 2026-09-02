@@ -4,7 +4,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Adrian Bond | Founder & Prompt Engineer",
-  description: "Founder & Prompt Engineer — I vibe code across any language and build products that think alongside humans."
+  description: "Founder & Prompt Engineer. I build across languages and create products that think alongside humans."
 }
 
 export const viewport: Viewport = {

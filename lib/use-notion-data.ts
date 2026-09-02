@@ -6,7 +6,7 @@ import type { Project, BlogPost } from "./data"
 import type { Announcement, SiteSettings } from "./data"
 
 /**
- * Hook that returns projects — shows static data instantly, then swaps in
+ * Hook that returns projects. It shows static data instantly, then swaps in
  * live Notion data once it loads. If the API fails, keeps the static data.
  */
 export function useProjects(): Project[] {
@@ -33,7 +33,7 @@ export function useProjects(): Project[] {
 }
 
 /**
- * Hook that returns blog posts — shows static data instantly, then swaps in
+ * Hook that returns blog posts. It shows static data instantly, then swaps in
  * live Notion data once it loads. If the API fails, keeps the static data.
  */
 export function useBlogPosts(): BlogPost[] {

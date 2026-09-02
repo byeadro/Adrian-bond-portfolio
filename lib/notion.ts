@@ -90,7 +90,7 @@ export type NotionSiteSettings = Record<string, string>
 
 function text(prop?: NotionProperty): string {
   const values = prop?.type === "title" ? prop.title : prop?.rich_text
-  return values?.map((item) => item.plain_text ?? "").join("") ?? ""
+    return (values?.map((item) => item.plain_text ?? "").join("") ?? "").replaceAll("\u2014", "-")
 }
 
 function select(prop?: NotionProperty): string {

@@ -11,15 +11,15 @@ import { useParams } from "next/navigation"
 
 const getPostContent = (slug: string): string => {
   const contentMap: Record<string, string> = {
-    "vibe-coding-manifesto": `I've been a polyglot programmer for most of my career, and I used to think that was a liability. Everyone kept telling me to "pick a lane"—master one language, one framework, one ecosystem. Become a React expert. Become a Rust wizard. Become the Python guy. But that advice never sat right with me, and I think it's fundamentally misguided.
+    "vibe-coding-manifesto": `I've been a polyglot programmer for most of my career, and I used to think that was a liability. Everyone kept telling me to "pick a lane": master one language, one framework, one ecosystem. Become a React expert. Become a Rust wizard. Become the Python guy. But that advice never sat right with me, and I think it's fundamentally misguided.
 
 The real skill in software engineering isn't memorizing APIs or becoming a domain expert in one particular tool. It's understanding the principles that transcend syntax. It's knowing when to reach for a tool, how to think about problems, and the ability to reason about trade-offs. Every language I've learned has made me a better engineer in every other language.
 
-When I built Embra in TypeScript, I borrowed patterns from Python. When I wrote parts of Who's Right in Swift, I thought about concurrency in ways that came from studying Rust. The vibe of coding—the meta-skill of building things—it's universal. It's not about the tool. It's about the craft, the philosophy, the willingness to experiment and learn. That's what I call vibe coding.`,
+When I built Embra in TypeScript, I borrowed patterns from Python. When I wrote parts of Who's Right in Swift, I thought about concurrency in ways that came from studying Rust. The vibe of coding, the meta-skill of building things, is universal. It's not about the tool. It's about the craft, the philosophy, the willingness to experiment and learn. That's what I call vibe coding.`,
 
     "building-ai-products": `Building AI products is fundamentally different from building traditional software, and most people still get it wrong. They treat AI as a feature that you bolt onto an existing product architecture, when really, the entire product should be designed around what AI can do uniquely.
 
-When I shipped Embra, the product wasn't built around OpenAI's API. The entire experience—from how meetings are captured, to how insights are surfaced, to how agents augment workflows—is designed from first principles around what AI is actually good at: pattern matching, synthesis, and augmentation. Same with Who's Right. The product only works because the core loop is designed for AI to shine.
+When I shipped Embra, the product wasn't built around OpenAI's API. The entire experience, from how meetings are captured to how insights are surfaced and how agents augment workflows, is designed from first principles around what AI is actually good at: pattern matching, synthesis, and augmentation. Same with Who's Right. The product only works because the core loop is designed for AI to shine.
 
 The graveyard of failed AI products is full of features that tried to use AI as window dressing. A chatbot on top of your existing app. A "powered by AI" badge. That's not a product. That's a feature. Real AI products rethink the entire user experience around what intelligence can enable. Rethink your workflows. Rethink your interfaces. Rethink what your users actually need.`,
 

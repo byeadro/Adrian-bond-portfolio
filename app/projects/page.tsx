@@ -44,7 +44,7 @@ export default function ProjectsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">01 — PROJECTS</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">01 - PROJECTS</p>
             <h1 className="font-sans text-3xl md:text-5xl font-light italic mb-4">Things I've Built</h1>
             <p className="text-muted-foreground max-w-2xl">Shipped and proud of. Each project represents a blend of thoughtful design, technical depth, and a commitment to solving real problems.</p>
           </motion.div>

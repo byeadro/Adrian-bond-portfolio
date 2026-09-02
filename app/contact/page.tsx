@@ -72,7 +72,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-              Whether you want to collaborate on a project, discuss AI, or just say hello — I'd love to hear from you.
+              Whether you want to collaborate on a project, discuss AI, or just say hello, I'd love to hear from you.
             </p>
           </motion.div>
         </section>
@@ -90,7 +90,7 @@ export default function Contact() {
             >
               {/* Email Section */}
               <div className="space-y-6">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">01 — EMAIL</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">01 - EMAIL</p>
                 <motion.a
                   href={`mailto:${email}`}
                   whileHover={{ scale: 1.05 }}
@@ -104,7 +104,7 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="space-y-6 pt-8 border-t border-white/10">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">02 — PHONE</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">02 - PHONE</p>
                 <motion.a
                   href={phoneHref}
                   whileHover={{ scale: 1.05 }}
@@ -118,7 +118,7 @@ export default function Contact() {
 
               {/* Status */}
               <div className="space-y-6 pt-8 border-t border-white/10">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">03 — STATUS</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">03 - STATUS</p>
                 <div className="flex items-center gap-3">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
@@ -130,7 +130,7 @@ export default function Contact() {
 
               {/* Social Links */}
               <div className="space-y-6 pt-8 border-t border-white/10">
-                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">04 — SOCIAL</p>
+                <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">04 - SOCIAL</p>
                 <div className="flex flex-col gap-4">
                   {socialLinks.map((link, index) => (
                     <motion.a
@@ -234,7 +234,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">05 — LET'S TALK</p>
+            <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-6">05 - LET'S TALK</p>
             <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">What's on Your Mind?</h2>
             <div className="space-y-6 text-base md:text-lg text-white/70 leading-relaxed">
               <p>

@@ -47,13 +47,13 @@ export interface BlogPost {
 export type Announcement = NotionAnnouncement
 export type SiteSettings = NotionSiteSettings
 
-// Static fallback data — used when Notion API key is not configured
+// Static fallback data used when the Notion API key is not configured
 const fallbackProjects: Project[] = [
   {
     slug: "embra",
     title: "Embra",
-    description: "A B2B SaaS platform built for law schools — giving students an AI-powered mentor and study companion that actually understands the pressure of legal education.",
-    longDescription: "Embra is a B2B SaaS platform built specifically for law schools, giving students an AI-powered mentor and study companion that actually understands the pressure of legal education. Born from watching my wife grind through law school and surveying 100+ law students about what was missing, we're building the future of legal education — one law school at a time.",
+    description: "A B2B SaaS platform built for law schools, giving students an AI-powered mentor and study companion that actually understands the pressure of legal education.",
+    longDescription: "Embra is a B2B SaaS platform built specifically for law schools, giving students an AI-powered mentor and study companion that actually understands the pressure of legal education. Born from watching my wife grind through law school and surveying 100+ law students about what was missing, we're building the future of legal education, one law school at a time.",
     tags: ["TypeScript", "Python", "AI/ML", "Supabase"],
     year: "2025",
     url: "https://app.joinembra.com",
@@ -72,8 +72,8 @@ const fallbackProjects: Project[] = [
   {
     slug: "voltly-ai",
     title: "Voltly AI",
-    description: "An AI-powered utility bill intelligence platform — automate data extraction, visualize energy trends, and forecast costs. No spreadsheets required.",
-    longDescription: "Voltly AI transforms how businesses handle utility bills. Upload any utility PDF and the AI extracts every data point instantly, replacing hours of manual entry with seconds of automated intelligence. Features include automated variance alerts, spend forecasting, pitch-deck-ready reports, and Excel exports — all wrapped in enterprise-grade security with GDPR & SOC2 compliance. Built to take businesses from billing chaos to clarity.",
+    description: "An AI-powered utility bill intelligence platform that automates data extraction, visualizes energy trends, and forecasts costs. No spreadsheets required.",
+    longDescription: "Voltly AI transforms how businesses handle utility bills. Upload any utility PDF and the AI extracts every data point instantly, replacing hours of manual entry with seconds of automated intelligence. Features include automated variance alerts, spend forecasting, pitch-deck-ready reports, and Excel exports, all wrapped in enterprise-grade security with GDPR & SOC2 compliance. Built to take businesses from billing chaos to clarity.",
     tags: ["TypeScript", "AI/ML", "Next.js", "SaaS"],
     year: "2025",
     url: "https://www.voltly.ai",
@@ -103,7 +103,7 @@ const fallbackBlogPosts: BlogPost[] = [
   },
   {
     slug: "senior-dev-200k-rebuilt-3-days",
-    title: "A Senior Dev Said My App Would Cost $200K — I Rebuilt It in 3 Days",
+    title: "A Senior Dev Said My App Would Cost $200K. I Rebuilt It in 3 Days",
     excerpt: "Here are my 7 tools that let me ship what a team of engineers quoted six figures for, in a fraction of the time.",
     date: "2025-02-20",
     readTime: "9 min read",
@@ -113,7 +113,7 @@ const fallbackBlogPosts: BlogPost[] = [
   {
     slug: "dont-know-how-to-code-building-tech-company",
     title: "I Don't Know How to Code. I'm Building a Tech Company Anyway.",
-    excerpt: "The honest story of how I went from zero coding experience to building AI products — by learning to ask the right questions.",
+    excerpt: "The honest story of how I went from zero coding experience to building AI products by learning to ask the right questions.",
     date: "2025-01-15",
     readTime: "6 min read",
     tags: ["Startup", "Philosophy"],
@@ -122,7 +122,7 @@ const fallbackBlogPosts: BlogPost[] = [
 ]
 
 /**
- * Get projects — fetches from Notion if configured, otherwise uses static fallback.
+ * Get projects from Notion if configured, otherwise use static fallback data.
  * Cached for 60 seconds during development, revalidated on deploy.
  */
 export async function getProjects(): Promise<Project[]> {
@@ -135,7 +135,7 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 /**
- * Get blog posts — fetches from Notion if configured, otherwise uses static fallback.
+ * Get blog posts from Notion if configured, otherwise use static fallback data.
  */
 export async function getBlogPosts(): Promise<BlogPost[]> {
   if (!process.env.NOTION_API_KEY || !process.env.NOTION_WRITING_DATA_SOURCE_ID) {
