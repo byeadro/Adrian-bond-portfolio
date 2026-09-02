@@ -124,7 +124,7 @@ async function notionRequest<T>(path: string, init?: RequestInit): Promise<T> {
       "Content-Type": "application/json",
       ...init?.headers,
     },
-    next: { revalidate: 60 },
+    cache: "no-store",
   })
 
   if (!response.ok) {
