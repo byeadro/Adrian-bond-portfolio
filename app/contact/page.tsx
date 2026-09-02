@@ -6,13 +6,18 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { CustomCursor } from "@/components/custom-cursor"
-
-const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/adrian-bond-87994b20a/" },
-  { label: "Instagram", href: "https://www.instagram.com/byeadro" },
-]
+import { useSiteSettings } from "@/lib/use-notion-data"
 
 export default function Contact() {
+  const settings = useSiteSettings()
+  const email = settings.email || "byeadro.dev@gmail.com"
+  const phone = settings.phone || "(217) 891-1364"
+  const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`
+  const availability = settings.availability || "Available for work"
+  const socialLinks = [
+    { label: "LinkedIn", href: settings.linkedin || "https://www.linkedin.com/in/adrian-bond-87994b20a/" },
+    { label: "Instagram", href: settings.instagram || "https://www.instagram.com/byeadro" },
+  ]
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,7 +33,7 @@ export default function Contact() {
     e.preventDefault()
     const subject = encodeURIComponent(`Contact from ${formData.name}`)
     const body = encodeURIComponent(`${formData.message}\n\nFrom: ${formData.name} (${formData.email})`)
-    window.location.href = `mailto:byeadro.dev@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`
   }
 
   const containerVariants = {
@@ -87,12 +92,12 @@ export default function Contact() {
               <div className="space-y-6">
                 <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">01 — EMAIL</p>
                 <motion.a
-                  href="mailto:byeadro.dev@gmail.com"
+                  href={`mailto:${email}`}
                   whileHover={{ scale: 1.05 }}
                   className="block group"
                 >
                   <p className="font-sans text-lg sm:text-2xl md:text-3xl font-light text-white group-hover:text-accent transition-colors duration-300 break-all sm:break-normal">
-                    byeadro.dev@gmail.com
+                    {email}
                   </p>
                 </motion.a>
               </div>
@@ -101,12 +106,12 @@ export default function Contact() {
               <div className="space-y-6 pt-8 border-t border-white/10">
                 <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">02 — PHONE</p>
                 <motion.a
-                  href="tel:+12178911364"
+                  href={phoneHref}
                   whileHover={{ scale: 1.05 }}
                   className="block group"
                 >
                   <p className="font-sans text-lg sm:text-2xl md:text-3xl font-light text-white group-hover:text-accent transition-colors duration-300 break-all sm:break-normal">
-                    (217) 891-1364
+                    {phone}
                   </p>
                 </motion.a>
               </div>
@@ -119,7 +124,7 @@ export default function Contact() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-accent" />
                   </span>
-                  <span className="font-mono text-sm tracking-wider text-white">AVAILABLE FOR WORK</span>
+                  <span className="font-mono text-sm tracking-wider text-white">{availability.toUpperCase()}</span>
                 </div>
               </div>
 

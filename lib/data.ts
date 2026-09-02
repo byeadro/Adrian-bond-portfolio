@@ -1,4 +1,11 @@
-import { fetchProjects, fetchBlogPosts } from "./notion"
+import {
+  fetchAnnouncements,
+  fetchBlogPosts,
+  fetchProjects,
+  fetchSiteSettings,
+  type NotionAnnouncement,
+  type NotionSiteSettings,
+} from "./notion"
 
 export interface Project {
   slug: string
@@ -9,6 +16,17 @@ export interface Project {
   year: string
   url: string
   featured: boolean
+  role?: string
+  client?: string
+  problem?: string
+  solution?: string
+  results?: string
+  coverImage?: string
+  gallery?: string[]
+  githubUrl?: string
+  seoDescription?: string
+  publishedAt?: string
+  order?: number
 }
 
 export interface BlogPost {
@@ -19,7 +37,15 @@ export interface BlogPost {
   readTime: string
   tags: string[]
   url?: string
+  featured?: boolean
+  coverImage?: string
+  seoDescription?: string
+  canonicalUrl?: string
+  content?: string[]
 }
+
+export type Announcement = NotionAnnouncement
+export type SiteSettings = NotionSiteSettings
 
 // Static fallback data — used when Notion API key is not configured
 const fallbackProjects: Project[] = [
@@ -100,26 +126,33 @@ const fallbackBlogPosts: BlogPost[] = [
  * Cached for 60 seconds during development, revalidated on deploy.
  */
 export async function getProjects(): Promise<Project[]> {
-  if (!process.env.NOTION_API_KEY) {
+  if (!process.env.NOTION_API_KEY || !process.env.NOTION_PROJECTS_DATA_SOURCE_ID) {
     return fallbackProjects
   }
   const notionProjects = await fetchProjects()
   if (notionProjects.length === 0) return fallbackProjects
-  // Merge: Notion projects + any fallback-only projects (e.g. Voltly)
-  const notionSlugs = new Set(notionProjects.map((p) => p.slug))
-  const extras = fallbackProjects.filter((p) => !notionSlugs.has(p.slug))
-  return [...notionProjects, ...extras]
+  return notionProjects
 }
 
 /**
  * Get blog posts — fetches from Notion if configured, otherwise uses static fallback.
  */
 export async function getBlogPosts(): Promise<BlogPost[]> {
-  if (!process.env.NOTION_API_KEY) {
+  if (!process.env.NOTION_API_KEY || !process.env.NOTION_WRITING_DATA_SOURCE_ID) {
     return fallbackBlogPosts
   }
   const notionPosts = await fetchBlogPosts()
   return notionPosts.length > 0 ? notionPosts : fallbackBlogPosts
+}
+
+export async function getAnnouncements(): Promise<Announcement[]> {
+  if (!process.env.NOTION_API_KEY || !process.env.NOTION_ANNOUNCEMENTS_DATA_SOURCE_ID) return []
+  return fetchAnnouncements()
+}
+
+export async function getSiteSettings(): Promise<SiteSettings> {
+  if (!process.env.NOTION_API_KEY || !process.env.NOTION_SITE_SETTINGS_DATA_SOURCE_ID) return {}
+  return fetchSiteSettings()
 }
 
 // Keep static exports for backward compatibility during migration

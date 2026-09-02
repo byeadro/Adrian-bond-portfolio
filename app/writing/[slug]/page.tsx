@@ -70,8 +70,8 @@ export default function BlogPostPage() {
     )
   }
 
-  const content = getPostContent(slug)
-  const paragraphs = content.split("\n\n")
+  const fallbackContent = getPostContent(slug)
+  const paragraphs = post.content?.length ? post.content : fallbackContent.split("\n\n").filter(Boolean)
 
   return (
     <SmoothScroll>

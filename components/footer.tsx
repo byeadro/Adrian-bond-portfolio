@@ -3,15 +3,17 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
-
-const footerLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/adrian-bond-87994b20a/" },
-  { label: "Instagram", href: "https://www.instagram.com/byeadro" },
-]
+import { useSiteSettings } from "@/lib/use-notion-data"
 
 export function Footer() {
   const [time, setTime] = useState("")
   const [isHovered, setIsHovered] = useState(false)
+  const settings = useSiteSettings()
+  const email = settings.email || "byeadro.dev@gmail.com"
+  const footerLinks = [
+    { label: "LinkedIn", href: settings.linkedin || "https://www.linkedin.com/in/adrian-bond-87994b20a/" },
+    { label: "Instagram", href: settings.instagram || "https://www.instagram.com/byeadro" },
+  ]
 
   useEffect(() => {
     const updateTime = () => {
@@ -19,12 +21,11 @@ export function Footer() {
       const hours = now.getHours().toString().padStart(2, "0")
       const minutes = now.getMinutes().toString().padStart(2, "0")
       const seconds = now.getSeconds().toString().padStart(2, "0")
-      const milliseconds = now.getMilliseconds().toString().padStart(3, "0")
-      setTime(`${hours}:${minutes}:${seconds}.${milliseconds}`)
+      setTime(`${hours}:${minutes}:${seconds}`)
     }
 
     updateTime()
-    const interval = setInterval(updateTime, 10)
+    const interval = setInterval(updateTime, 1000)
     return () => clearInterval(interval)
   }, [])
 
@@ -32,7 +33,7 @@ export function Footer() {
     <footer className="relative">
       {/* Main CTA */}
       <motion.a
-        href="mailto:byeadro.dev@gmail.com"
+        href={`mailto:${email}`}
         data-cursor-hover
         className="relative block overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}

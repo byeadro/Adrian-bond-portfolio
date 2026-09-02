@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
+import { useSiteSettings } from "@/lib/use-notion-data"
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -17,6 +18,8 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+  const settings = useSiteSettings()
+  const availability = settings.availability || "Available for work"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,7 +76,7 @@ export function Navbar() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
             </span>
-            <span className="font-mono text-xs tracking-wider text-muted-foreground">AVAILABLE FOR WORK</span>
+            <span className="font-mono text-xs tracking-wider text-muted-foreground">{availability.toUpperCase()}</span>
           </div>
 
           {/* Mobile Menu Button */}
@@ -81,6 +84,8 @@ export function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-1.5"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
             <motion.span
               animate={isMenuOpen ? { rotate: 45, y: 5 } : { rotate: 0, y: 0 }}
@@ -108,7 +113,7 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg md:hidden"
           >
-            <nav className="flex flex-col items-center justify-center h-full gap-8">
+            <nav id="mobile-navigation" className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.label}
@@ -139,7 +144,7 @@ export function Navbar() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
                 </span>
-                <span className="font-mono text-xs tracking-wider text-muted-foreground">AVAILABLE FOR WORK</span>
+                <span className="font-mono text-xs tracking-wider text-muted-foreground">{availability.toUpperCase()}</span>
               </motion.div>
             </nav>
           </motion.div>
